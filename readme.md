@@ -2,14 +2,6 @@
 
 This package generates a specified number of visually distinct colors across the HCL color space using the `iwanthue` library.
 
-## License
-
-This package is proprietary software. All rights reserved.
-
-The use, copying, modification, and distribution of this software without the express written permission of the copyright holder is strictly prohibited.
-
-For licensing inquiries, please contact BoDee Angus at [contact information].
-
 ## Installation
 
 To install the package, run:
@@ -51,10 +43,16 @@ const customColors = await generateDistinctColors(3, options);
 
 A promise that resolves to an array of hex color strings.
 
-## Obtaining a License
+## Contributing
 
-To obtain a license for using this package, please contact BoDee Angus at [contact information]. Licensing fees and terms will be discussed upon inquiry.
+Contributions are welcome! Please open an issue or submit a pull request if you have any suggestions or improvements.
 
-## Support
+## License
 
-For any questions or support regarding the usage of this package, please contact BoDee Angus at [contact information].
+ISC License
+
+Copyright (c) [Year], [Author Name]
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
