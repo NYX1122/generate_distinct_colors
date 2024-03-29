@@ -1,6 +1,6 @@
 import iwanthue, { IWantHueSettings } from 'iwanthue';
 
-const app = async (colorNum: number, options?: IWantHueSettings): Promise<Array<string>> => {
+const generateDistinctColors = async (colorNum: number, options?: IWantHueSettings): Promise<Array<string>> => {
   const attempts = options?.attempts ?? 100;
   const quality = options?.quality ?? 800;
   const colorSpace = options?.colorSpace ?? [0, 330, 75, 100, 0, 80];
@@ -23,4 +23,4 @@ const app = async (colorNum: number, options?: IWantHueSettings): Promise<Array<
   });
 };
 
-export default app;
+export default generateDistinctColors;
