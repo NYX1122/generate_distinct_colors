@@ -25,12 +25,7 @@
     // Add any custom rules or overrides here
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ],
+    "@typescript-eslint/no-unused-vars": "warn",
     "semi": [
       "error",
       "always"
@@ -49,6 +44,7 @@
   "ignorePatterns": [
     "node_modules",
     "dist",
-    "coverage"
+    "coverage",
+    "jest.config.ts"
   ]
 }

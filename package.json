@@ -15,6 +15,10 @@
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --ext .ts src --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NYX1122/generate_distinct_colors.git"
+  },
   "author": "BoDee Angus",
   "license": "ISC",
   "devDependencies": {
