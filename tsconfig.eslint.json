@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*" // This line is crucial; it should cover all TypeScript files you intend to lint.
+  ],
+  "exclude": [
+    // Ensure no exclusion rules are preventing ESLint from covering the desired files.
+    "node_modules", // Typically, you'd still exclude 'node_modules'.
+    "dist" // And likely the output directory.
+    // Do not exclude your test directory here.
+  ]
+}

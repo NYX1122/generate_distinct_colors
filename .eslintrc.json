@@ -1,17 +1,10 @@
-/**
- * ESLint configuration file.
- *
- * This file defines ESLint rules and plugins for linting TypeScript code. It sets the project root, parser, and extends recommended ESLint and TypeScript-ESLint configs. Additional rules are defined to enforce code style guidelines.
- */
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": "./tsconfig.eslint.json"
   },
   "plugins": [
     "@typescript-eslint"
@@ -22,10 +15,20 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "rules": {
-    // Add any custom rules or overrides here
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
     "semi": [
       "error",
       "always"
@@ -38,13 +41,12 @@
     "@typescript-eslint/no-floating-promises": "error"
   },
   "env": {
-    "node": true,
-    "jest": true
+    "node": true
   },
   "ignorePatterns": [
     "node_modules",
     "dist",
     "coverage",
-    "jest.config.ts"
+    "vitest.config.ts"
   ]
 }
