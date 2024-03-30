@@ -1,6 +1,7 @@
 import iwanthue, { IWantHueSettings } from 'iwanthue';
+import displayColors from 'display_colors';
 
-const generateDistinctColors = (colorNum: number, options?: IWantHueSettings): Array<string> => {
+const generateDistinctColors = (colorNum: number, options?: IWantHueSettings, display?: boolean): Array<string> => {
   const attempts = options?.attempts ?? 100;
   const quality = options?.quality ?? 800;
   const colorSpace = options?.colorSpace ?? [0, 330, 75, 100, 0, 80];
@@ -15,7 +16,13 @@ const generateDistinctColors = (colorNum: number, options?: IWantHueSettings): A
     seed,
   });
 
+  if (display === true) {
+    displayColors(colors);
+  }
+
   return colors;
 };
+
+generateDistinctColors(8, undefined, true);
 
 export default generateDistinctColors;

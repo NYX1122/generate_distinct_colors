@@ -30,6 +30,7 @@
     "vitest": "^1.4.0"
   },
   "dependencies": {
+    "display_colors": "file:../display_colors",
     "iwanthue": "^2.0.0"
   },
   "eslintConfig": {
