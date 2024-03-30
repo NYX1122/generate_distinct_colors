@@ -5,12 +5,9 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.options": {
-    "configFile": ".eslintrc.json"
-  },
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
-  ]
+  ],
 }

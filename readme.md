@@ -16,7 +16,7 @@ npm install generate_distinct_colors
 import generateDistinctColors from 'generate_distinct_colors';
 
 // Generate 5 distinct colors with default options
-const colors = await generateDistinctColors(5);
+const colors = generateDistinctColors(5);
 
 // Generate 3 distinct colors with custom options
 const options = {
@@ -26,7 +26,7 @@ const options = {
   clustering: 'k-means',
   seed: 42,
 };
-const customColors = await generateDistinctColors(3, options);
+const customColors = generateDistinctColors(3, options);
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ const customColors = await generateDistinctColors(3, options);
 
 ### Return Value
 
-A promise that resolves to an array of hex color strings.
+An array of hex color strings.
 
 ## Contributing
 
