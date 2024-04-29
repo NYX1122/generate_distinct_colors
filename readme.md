@@ -1,6 +1,6 @@
 # Generate Distinct Colors
 
-This package generates a specified number of visually distinct colors across the HCL color space using the `iwanthue` library.
+This package generates a specified number of visually distinct colors across the HCL color space using the `iwanthue` library. The returned colors will be sorted based on hue.
 
 ## Installation
 

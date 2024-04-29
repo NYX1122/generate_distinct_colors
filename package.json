@@ -7,7 +7,7 @@
   "types": "./dist/app.d.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/app.js",
+    "start": "npm run build && node ./dist/app.js",
     "dev": "npm run lint && npm run test && npm run build && npm run start",
     "test": "vitest --run",
     "test:watch": "vitest --watch",
@@ -31,7 +31,9 @@
   },
   "dependencies": {
     "display_colors": "file:../display_colors",
-    "iwanthue": "^2.0.0"
+    "iwanthue": "^2.0.0",
+    "save_to_json": "file:../save_to_json",
+    "sort_colors": "file:../sort_colors"
   },
   "eslintConfig": {
     "root": true,

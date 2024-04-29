@@ -1,28 +1,32 @@
 import iwanthue, { IWantHueSettings } from 'iwanthue';
+import sortColors from 'sort_colors';
 import displayColors from 'display_colors';
 
-const generateDistinctColors = (colorNum: number, options?: IWantHueSettings, display?: boolean): Array<string> => {
-  const attempts = options?.attempts ?? 100;
-  const quality = options?.quality ?? 800;
-  const colorSpace = options?.colorSpace ?? [0, 330, 75, 100, 0, 80];
-  const clustering = options?.clustering ?? 'force-vector';
-  const seed = options?.seed ?? 1;
+type Parameters = {
+  colorNum: number,
+  options?: IWantHueSettings,
+  display?: boolean
+};
 
-  const colors = iwanthue(colorNum, {
-    attempts,
-    quality,
-    colorSpace,
-    clustering,
-    seed,
-  });
+const generateDistinctColors = ({ colorNum, options, display }: Parameters): Array<string> => {
+  const optionData = {
+    attempts: options?.attempts ?? 1000,
+    quality: options?.quality ?? 500,
+    colorSpace: options?.colorSpace ?? [0, 360, 75, 100, 0, 100],
+    clustering: options?.clustering ?? 'force-vector',
+    seed: options?.seed ?? 1
+  };
+
+
+  const colors = iwanthue(colorNum, optionData);
+
+  const sortedColors = sortColors(colors);
 
   if (display === true) {
-    displayColors(colors);
+    displayColors(sortedColors);
   }
 
   return colors;
 };
-
-generateDistinctColors(8, undefined, true);
 
 export default generateDistinctColors;
