@@ -1,12 +1,8 @@
-import iwanthue, { IWantHueSettings } from 'iwanthue';
+import iwanthue from 'iwanthue';
 import sortColors from 'sort_colors';
 import displayColors from 'display_colors';
 
-type Parameters = {
-  colorNum: number,
-  options?: IWantHueSettings,
-  display?: boolean
-};
+import { Parameters } from './types';
 
 const generateDistinctColors = ({ colorNum, options, display }: Parameters): Array<string> => {
   const optionData = {
